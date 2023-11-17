@@ -254,7 +254,7 @@ const datos = [{
         opcionesCell.innerHTML = `
         <td class="Opciones">
           <div>
-              <a href="editar_vehiculo"><img
+              <a href="editar_participante"><img
                       src="../images/editar.png" alt="icon"
                       class="opc_edit"></a>
           </div>
