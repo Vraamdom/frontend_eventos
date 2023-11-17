@@ -1,0 +1,168 @@
+body{
+  color: #000;
+  margin:0;
+  padding:0;
+
+}
+.formularios{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.formulario{
+    width: 650px;
+    height: auto;
+    padding: 25px;
+
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+}
+
+
+.titulo_formulario{
+    font-size: 8vh;
+    font-weight: 600;
+    text-align: center;
+}
+.page-title{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 12px;
+    width: 100%;
+}
+
+.page-title .title_right{
+    width: 100%;
+    height: auto;
+}
+#form_agregar_evento, #form_tipo_participante, #form_vehiculos, #form_agregar_participante{
+    display: grid;
+    grid-template-columns: 50% 50%;
+    grid-template-rows: auto;
+    grid-gap: 12px;
+}
+
+#form_vehiculos .formulario_bloque-uno{
+    position: relative;
+    left: 167px;
+}
+
+#form_vehiculos .boton{
+    left: 0px;
+    display: block;
+    float: right;
+    margin-top: 8px;
+    width: 295px;
+}
+.bloque-formulario{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+    margin-top: 10px;
+    font-weight: bold;
+}
+.input-control{
+    display: flex;
+    flex-direction: column;
+}
+.input-control.success input[type="text"],
+.input-control.success input[type="email"],
+.input-control.success input[type="password"],
+.input-control.success input[type="datetime-local"],
+.input-control.success input[type="date"],
+.input-control.success select,
+.input-control.success textarea{
+    border-color: #09c372;
+}
+.input-control.error input[type="text"],
+.input-control.error input[type="email"],
+.input-control.error input[type="password"],
+.input-control.error select,
+.input-control.error textarea{
+    border-color: red;
+}
+
+
+.input-control input[type="text"],
+.input-control input[type="email"],
+.input-control input[type="password"],
+.input-control.success input[type="date"],
+.input-control textarea,
+.input-control select{
+    width: 90%;
+    max-width: 90%;
+    padding: 10px;
+    margin-bottom: 4px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+}
+ 
+input[type="datetime-local"] {
+    width: 90%;
+    padding: 10px;
+    margin-bottom: 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+
+.input-control input[type="datetime-local"]:focus,
+.input-control input[type="text"]:focus,
+.input-control input[type="email"]:focus,
+.input-control input[type="password"]:focus,
+.input-control.success input[type="date"]:focus,
+.input-control textarea:focus,
+.input-control select:focus {
+    border-color: #0071eb;
+    outline: none;
+}
+ 
+
+ 
+option {
+    padding: 5px;
+}
+
+
+.boton, .boton_volver{
+    background-color: #007bff;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    position: relative;
+    left: 155px;
+}
+
+.boton_volver{
+    background-color: rgb(255, 51, 51);
+}
+
+ 
+.boton:hover {
+    background-color: #0056b3;
+}
+
+
+
+
+.input-control .error {
+    color: red;
+    font-size: 12px;
+    height: 13px;
+    margin-bottom: 7px;
+}
+

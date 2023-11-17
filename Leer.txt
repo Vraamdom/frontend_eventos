@@ -1,0 +1,23 @@
+Bueno muchachos aqui una breve explicación sobre esto.
+
+El repositorio de vidakids la rama master la van a dejar quieta, cada uno de ustedes va a tener su rama
+que es donde van a trabajar, la rama va tener el nombre de ustedes entonces por lo tanto cuando vayan a hacer un push
+o subir algún archivo deben de fijar se que si esten en su rama ya que sino se subirá al master y si en el master hay código
+que si funciona creo que no hay forma de recuperarlo (no estoy seguro).
+
+La ramas que se creen apartir de la master son como una copia de la master por lo tanto si trabajan en estas el master va 
+a quedar igual a como estaba.
+
+Para fijarse que ramas hay y en cual están usen este comando:
+
+git branch
+
+Para dirigirse a una rama utilizen este:
+
+git checkout (nombre de la rama)
+
+Una vez esten en su rama los cambios que hagan y todo solo va a quedar pa su rama, ya cuando estemos seguros de que todo funciona
+y queramos pasar para la rama master lo que tenemos en las ramas de cada uno se usa un tal git merge pero no se como se usa hay que
+consultar más de esto.
+
+bueno y por ultimo en los commits pongan lo que hicieron pa que no se pierdan.

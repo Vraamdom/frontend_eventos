@@ -1,0 +1,143 @@
+
+
+.bloque-tabla {
+  width: 100%;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.tabla table {
+  width: 1019px;
+  height: auto;
+}
+
+.th_center {
+  text-align: center;
+}
+.titulo_p {
+  text-align: center;
+  margin-top: 18px;
+}
+.titulo_s {
+  display: grid;
+  grid-template-columns: auto auto;
+  grid-gap: 10px;
+}
+
+.titulo_s h4 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 10px;
+}
+.opc_edit,
+.opc_delete,
+.opc_eyes {
+  width: 25px;
+}
+.opc_delete:hover {
+  cursor: pointer;
+}
+.icon_add {
+  width: 55px;
+  padding-left: 5px;
+}
+.search_icon {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  margin: 16px 0px 16px 0px;
+  padding: 0px 25px 0 25px;
+}
+
+.form-inline {
+  display: grid;
+  grid-template-columns: auto auto;
+  grid-gap: 2px;
+}
+
+.Opciones {
+  display: flex;
+  justify-content: space-around;
+}
+
+input[type="search"] {
+  width: 100%;
+  max-width: 100%;
+  padding: 10px;
+  margin-right: 0px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 16px;
+}
+
+input[type="submit"]:hover {
+  background-color: #0056b3;
+}
+.form_g_c {
+  margin-top: 10px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.boton {
+  margin: 10px;
+}
+.lbl-switch {
+  display: inline-block;
+  width: 55px;
+  height: 30px;
+  background: #e00c0c;
+  border-radius: 100px;
+  position: relative;
+  cursor: pointer;
+}
+#btn-switch:checked ~ .lbl-switch {
+  background-color: darkgreen;
+}
+#btn-switch:checked ~ .lbl-switch:after {
+  left: 28px;
+}
+.lbl-switch:after {
+  position: absolute;
+  content: "";
+  width: 22px;
+  height: 22px;
+  background: #fff;
+  border-radius: 100px;
+  top: 4px;
+  left: 5px;
+  transition: 0.3s;
+}
+#btn-switch {
+  display: none;
+}
+.btn-boton-estado {
+  margin-left: 150px;
+  margin-top: -37px;
+}
+.pagination {
+  display: inline;
+  float: right;
+}
+.pagination a,
+.pagination button {
+  color: #000000;
+  padding: 8px 16px;
+  text-decoration: none;
+  cursor: pointer;
+  margin: 2px;
+}
+.pagination a:hover,
+.pagination button:hover {
+  background-color: #ddd;
+}
+
+#currentPage {
+  font-size: 15px;
+}
