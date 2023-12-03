@@ -1,5 +1,5 @@
 
-const url = 'http://localhost:1121/tipo_participantes'
+const url = 'https://backend-eventos.onrender.com/tipo_participantes'
 
 const listarTP = async () => {
     //Objeto del html donde se deslegará la información
