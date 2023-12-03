@@ -1,5 +1,5 @@
 
-const url = 'http://localhost:1121/vehiculos_contratados'
+const url = 'https://backend-eventos.onrender.com/vehiculos_contratados'
 
 const listarVehiculos = async () => {
     //Objeto del html donde se deslegará la información
