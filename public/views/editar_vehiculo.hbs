@@ -13,7 +13,7 @@
     
 </head>
 
-<body class="nav-md">
+<body class="nav-md" onload="editarVehiculo()">
     <div class="container body">
         <div class="main_container">
             <div class="col-md-3 left_col">
@@ -204,7 +204,7 @@
                             <form action="" id="form_vehiculos">
                                 <div class="formulario_bloque-uno">
                                     <div class="input-control">
-                                      <label for="select">Tipo vehículo</label>
+                                      <label for="select" id="tipo_v">Tipo vehículo</label>
                                         <select name="" id="tipo_ve">
                                             <option value="seleccionar">seleccionar</option>
                                             <option value="Bus">Bus</option>
@@ -216,7 +216,7 @@
 
                                     <div class="input-control">
                                         <label for="text">Placa del vehículo</label>
-                                        <input type="text" name="" id="placa_ve">
+                                        <input type="text" name="" id="placa_ve" disabled>
                                         <div class="error"></div>
                                     </div>
                                     
@@ -225,7 +225,7 @@
                                         <input type="text" name="" id="puestos_ve">
                                         <div class="error"></div>
                                     </div>
-                                    <button type="submit" class="boton" name="" id="boton">Editar vehículo contratado</button>
+                                    <button type="submit" class="boton" name="" id="boton_e">Editar vehículo contratado</button>
                                 </div>
 
                             </form>
@@ -244,8 +244,9 @@
 
           
         </div>
-          {{>footer_editar_v}}
-            
+        <script src="../js/funciones_v.js"></script>
+        <script src="validaciones_formulario_editar_v.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
         </div>
     </div> 
    

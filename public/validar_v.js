@@ -6,31 +6,6 @@ const tipo_vehiculo = document.getElementById('tipo_ve')
 const placa_vehiculo = document.getElementById('placa_ve')
 const puestos_vehiculo = document.getElementById('puestos_ve')
 
-// VOLVER AL INDEX DE  EVENTO
-const boton_volver = document.getElementById('boton_volver')
-
-const volver_index = () =>{
-    Swal.fire({
-        title: "Quieres salir del formulario?",
-        showDenyButton: true,
-        confirmButtonText: "Seguir",
-        denyButtonText: `Volver`
-      }).then((result) => {
-        /* Read more about isConfirmed, isDenied below */
-        if (result.isConfirmed) {
-            Swal.fire("Seguiras en el fomrulario", "", "success");
-        } else if (result.isDenied) {
-          Swal.fire("Redireccionando...", "", "info");
-          location.href = 'eventos'
-        }
-      });
-}
-boton_volver.addEventListener('click', e =>{
-    e.preventDefault()
-
-    volver_index()
-})
-
 formulario_vehiculos.addEventListener('submit', e =>{
     e.preventDefault()
 
@@ -144,7 +119,7 @@ const validateInputs_vehiculos= () =>{
         Swal.fire({
             position: "center",
             icon: "success",
-            title: "El vehículo contratado ha sido modificado.",
+            title: "El vehículo contratado ha sido registrado.",
             showConfirmButton: false,
             timer: 1500
           });

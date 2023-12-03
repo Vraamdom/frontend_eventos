@@ -8,30 +8,7 @@ const genero_biologico = document.getElementById('genero_b')
 const nro_invitados_tipo = document.getElementById('nro_invitados_p')
 
 
-// VOLVER AL INDEX DE  EVENTO
-const boton_volver = document.getElementById('boton_volver')
 
-const volver_index = () =>{
-    Swal.fire({
-        title: "Quieres salir del formulario?",
-        showDenyButton: true,
-        confirmButtonText: "Seguir",
-        denyButtonText: `Volver`
-      }).then((result) => {
-        /* Read more about isConfirmed, isDenied below */
-        if (result.isConfirmed) {
-            Swal.fire("Seguiras en el fomrulario", "", "success");
-        } else if (result.isDenied) {
-          Swal.fire("Redireccionando...", "", "info");
-          location.href = 'eventos'
-        }
-      });
-}
-boton_volver.addEventListener('click', e =>{
-    e.preventDefault()
-
-    volver_index()
-})
 
 
 formulario_tipo_part.addEventListener('submit', e =>{
@@ -162,7 +139,7 @@ const validateInputs_tipo_part = () =>{
         Swal.fire({
             position: "center",
             icon: "success",
-            title: "El tipo de participante ha sido modificado.",
+            title: "El tipo de participante ha sido agregado.",
             showConfirmButton: false,
             timer: 1500
           });

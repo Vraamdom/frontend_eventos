@@ -26,6 +26,12 @@ app.get('/agregar_participante',(req,res)=>{
     })
 })
 
+app.get('/agregar_vehiculo',(req,res)=>{
+    res.render('agregar_vehiculo',{
+        nombre : 'vramdom'
+    })
+})
+
 app.get('/agregar_tipo_participante',(req,res)=>{
     res.render('agregar_tipo_participante',{
         nombre : 'vramdom'
@@ -71,6 +77,12 @@ app.get('/index_vehiculos',(req,res)=>{
 
 app.get('/index_tipo_participantes',(req,res)=>{
     res.render('index_tipo_p',{
+        nombre : 'vramdom'
+    })
+})
+
+app.post('/agregar_vehiculo',(req,res)=>{
+    res.render('agregar_vehiculo',{
         nombre : 'vramdom'
     })
 })

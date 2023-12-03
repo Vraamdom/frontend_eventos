@@ -9,17 +9,19 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <title>Vidakids |Home</title>
-{{>header}}
-    
+    {{>header}}
+
 </head>
 
-<body class="nav-md" onload="editarTP()">
+<body class="nav-md">
     <div class="container body">
         <div class="main_container">
             <div class="col-md-3 left_col">
                 <div class="left_col scroll-view">
                     <div class="navbar nav_title" style="border: 0;">
-                        <a href="/" class="site_title"><h1>Vida<span>kids</span></h1></a>
+                        <a href="/" class="site_title">
+                            <h1>Vida<span>kids</span></h1>
+                        </a>
                     </div>
 
                     <div class="clearfix"></div>
@@ -27,7 +29,7 @@
                     <!-- menu profile quick info -->
                     <div class="profile clearfix">
                         <div class="profile_pic">
-                           <img src="images/img.jpg" alt="..." class="img-circle profile_img">
+                            <img src="images/img.jpg" alt="..." class="img-circle profile_img">
                         </div>
                         <div class="profile_info">
                             <span>Welcome,</span>
@@ -43,14 +45,15 @@
                         <div class="menu_section">
                             <h3>General</h3>
                             <ul class="nav side-menu">
-                                <li><a><i class="fa fa-home"></i> Home <span class="fa fa-chevron-down" ></span></a>
+                                <li><a><i class="fa fa-home"></i> Home <span class="fa fa-chevron-down"></span></a>
                                     <ul class="nav child_menu">
                                         <li><a href="/">Inicio</a></li>
                                         {{!-- <li><a href="index2.html">Dashboard2</a></li>
                                         <li><a href="index3.html">Dashboard3</a></li> --}}
                                     </ul>
                                 </li>
-                                <li><a><i class="fa fa-edit"></i> Acudientes <span class="fa fa-chevron-down"></span></a>
+                                <li><a><i class="fa fa-edit"></i> Acudientes <span
+                                            class="fa fa-chevron-down"></span></a>
                                     <ul class="nav child_menu">
                                         {{!-- <li><a href="form.html">General Form</a></li> --}}
                                         <li><a href="lista_Acudiente">Lista de Acudiente</a></li>
@@ -60,7 +63,8 @@
                                         <li><a href="form_buttons.html">Form Buttons</a></li> --}}
                                     </ul>
                                 </li>
-                                <li><a><i class="fa fa-desktop"></i> Servicios <span class="fa fa-chevron-down"></span></a>
+                                <li><a><i class="fa fa-desktop"></i> Servicios <span
+                                            class="fa fa-chevron-down"></span></a>
                                     <ul class="nav child_menu">
                                         <li><a href="">Categoria de servicios</a></li>
                                         <li><a href="eventos">Eventos</a></li>
@@ -68,18 +72,20 @@
                                         <li><a href="">Profesionales Voluntarios</a></li>
                                     </ul>
                                 </li>
-                                <li><a><i class="fa fa-table"></i> Donaaciones <span class="fa fa-chevron-down"></span></a>
+                                <li><a><i class="fa fa-table"></i> Donaaciones <span
+                                            class="fa fa-chevron-down"></span></a>
                                     <ul class="nav child_menu">
                                         <li><a href="tables.html">Tables</a></li>
                                     </ul>
                                 </li>
-                                <li><a><i class="fa fa-bar-chart-o"></i> Ventas <span class="fa fa-chevron-down"></span></a>
+                                <li><a><i class="fa fa-bar-chart-o"></i> Ventas <span
+                                            class="fa fa-chevron-down"></span></a>
                                     <ul class="nav child_menu">
                                         <li><a href="chartjs.html">Chart JS</a></li>
 
                                     </ul>
                                 </li>
-                                
+
                             </ul>
                         </div>
 
@@ -91,31 +97,36 @@
             <div class="top_nav">
                 <div class="nav_menu">
                     <div class="nav toggle">
-                        <a id="menu_toggle"><i class="fa fa-bars"style="color:#f0cc2b;"></i></a>
+                        <a id="menu_toggle"><i class="fa fa-bars" style="color:#f0cc2b;"></i></a>
                     </div>
                     <nav class="nav navbar-nav">
                         <ul class=" navbar-right">
                             <li class="nav-item dropdown open" style="padding-left: 15px;">
-                                <a href="javascript:;" class="user-profile dropdown-toggle" aria-haspopup="true" id="navbarDropdown" data-toggle="dropdown" aria-expanded="false">
+                                <a href="javascript:;" class="user-profile dropdown-toggle" aria-haspopup="true"
+                                    id="navbarDropdown" data-toggle="dropdown" aria-expanded="false">
                                     <img src="images/img.jpg" alt="">{{nombre}}
                                 </a>
-                                <div class="dropdown-menu dropdown-usermenu pull-right" aria-labelledby="navbarDropdown">
+                                <div class="dropdown-menu dropdown-usermenu pull-right"
+                                    aria-labelledby="navbarDropdown">
                                     <a class="dropdown-item" href="javascript:;"> Profile</a>
                                     <a class="dropdown-item" href="javascript:;">
                                         <span class="badge bg-red pull-right">50%</span>
                                         <span>Settings</span>
                                     </a>
                                     <a class="dropdown-item" href="javascript:;">Help</a>
-                                    <a class="dropdown-item" href="login"><i class="fa fa-sign-out pull-right"></i> Cerrar sesión</a>
+                                    <a class="dropdown-item" href="login"><i class="fa fa-sign-out pull-right"></i>
+                                        Cerrar sesión</a>
                                 </div>
                             </li>
 
                             <li role="presentation" class="nav-item dropdown open">
-                                <a href="javascript:;" class="dropdown-toggle info-number" id="navbarDropdown1" data-toggle="dropdown" aria-expanded="false">
-                                    <i class="fa fa-envelope-o "style="color: #f0cc2b;" ></i>
+                                <a href="javascript:;" class="dropdown-toggle info-number" id="navbarDropdown1"
+                                    data-toggle="dropdown" aria-expanded="false">
+                                    <i class="fa fa-envelope-o " style="color: #f0cc2b;"></i>
                                     <span class="badge bg-green">6</span>
                                 </a>
-                                <ul class="dropdown-menu list-unstyled msg_list" role="menu" aria-labelledby="navbarDropdown1">
+                                <ul class="dropdown-menu list-unstyled msg_list" role="menu"
+                                    aria-labelledby="navbarDropdown1">
                                     <li class="nav-item">
                                         <a class="dropdown-item">
                                             <span class="image"><img src="images/img.jpg" alt="Profile Image" /></span>
@@ -124,7 +135,8 @@
                                                 <span class="time">3 mins ago</span>
                                             </span>
                                             <span class="message">
-                                                Film festivals used to be do-or-die moments for movie makers. They were where...
+                                                Film festivals used to be do-or-die moments for movie makers. They were
+                                                where...
                                             </span>
                                         </a>
                                     </li>
@@ -136,7 +148,8 @@
                                                 <span class="time">3 mins ago</span>
                                             </span>
                                             <span class="message">
-                                                Film festivals used to be do-or-die moments for movie makers. They were where...
+                                                Film festivals used to be do-or-die moments for movie makers. They were
+                                                where...
                                             </span>
                                         </a>
                                     </li>
@@ -148,7 +161,8 @@
                                                 <span class="time">3 mins ago</span>
                                             </span>
                                             <span class="message">
-                                                Film festivals used to be do-or-die moments for movie makers. They were where...
+                                                Film festivals used to be do-or-die moments for movie makers. They were
+                                                where...
                                             </span>
                                         </a>
                                     </li>
@@ -160,7 +174,8 @@
                                                 <span class="time">3 mins ago</span>
                                             </span>
                                             <span class="message">
-                                                Film festivals used to be do-or-die moments for movie makers. They were where...
+                                                Film festivals used to be do-or-die moments for movie makers. They were
+                                                where...
                                             </span>
                                         </a>
                                     </li>
@@ -182,94 +197,77 @@
 
             <!-- page content -->
             <div class="right_col" role="main">
-          <!-- top tiles -->
-          
-          <!-- /top tiles -->
+                <!-- top tiles -->
 
-          <div class="row">
-            <div class="col-md-12 col-sm-12 ">
-                <div class="formularios">
+                <!-- /top tiles -->
 
-                    <div class="bloque-formulario">
-                        <div class="page-title">
-                            <div class="title_right">
-                                <h1 class="titulo_formulario">Editar un tipo de participante</h1>
-                                
+                <div class="row">
+                    <div class="col-md-12 col-sm-12 ">
+                        <div class="formularios">
+
+
+                            <div class="bloque-formulario">
+                                <div class="page-title">
+                                    <div class="title_right">
+                                        <h1 class="titulo_formulario">Agregar un vehículo contratado</h1>
+
+                                    </div>
+                                </div>
+
+                                <div class="formulario">
+                                    <form action="" id="form_vehiculos">
+                                        <div class="formulario_bloque-uno">
+                                            <div class="input-control">
+                                                <label for="select">Tipo vehículo</label>
+                                                <select name="" id="tipo_ve">
+                                                    <option value="seleccionar">seleccionar</option>
+                                                    <option value="Bus">Bus</option>
+                                                    <option value="Carro">Carro</option>
+                                                    <option value="Furgoneta">Furgoneta</option>
+                                                </select>
+                                                <div class="error"></div>
+                                            </div>
+
+                                            <div class="input-control">
+                                                <label for="text">Placa del vehículo</label>
+                                                <input type="text" name="" id="placa_ve">
+                                                <div class="error"></div>
+                                            </div>
+
+                                            <div class="input-control">
+                                                <label for="text">Puestos del vehículo</label>
+                                                <input type="text" name="" id="puestos_ve">
+                                                <div class="error"></div>
+                                            </div>
+                                            <button type="submit" class="boton" name="" id="boton">Agregar vehículo
+                                                contratado</button>
+                                        </div>
+
+                                    </form>
+                                </div>
                             </div>
-                            <button type="submit" id="boton_volver" class="boton_volver">Volver</button>
+
+
                         </div>
 
-                        <div class="formulario">
-                            <form action="" id="form_tipo_participante">
-                                <div class="formulario_bloque-uno">
-                                    <div class="input-control">
-                                      <label for="select">Tipo participante</label>
-                                        <select name="" id="tipo_part" disabled>
-                                            <option value="seleccionar">seleccionar</option>
-                                            <option value="Beneficiario">Beneficiario</option>
-                                            <option value="Profesional">Profesional voluntario</option>
-                                            <option value="Acudiente">Acudiente</option>
-                                            <option value="Administrador">Administrador</option>
-                                            <option value="Diriector_a">Dir. Administrativo</option>
-                                        </select>
-                                        <div class="error"></div>
-                                    </div>
+                        <div class="clearfix"></div>
 
-                                    <div class="input-control">
-                                        <label for="text">Genero biologico</label>
-                                        <select name="" id="genero_b" >
-                                            <option value="seleccionar">seleccionar</option>
-                                            <option value="Masculino">Masculino</option>
-                                            <option value="Femenino">Femenino</option>
-                                            <option value="Otro">Otro</option>
-                                        </select>
-                                        <div class="error"></div>
-                                    </div>
-                                    
-                                    <div class="input-control">
-                                        <label for="text">Numero de invitados por tipo participante </label>
-                                        <input type="text" name="" id="nro_invitados_p">
-                                        <div class="error"></div>
-                                    </div>
-                                    
-                                </div>
-                                <div class="formulario_bloque-dos">
-                                    <div class="input-control">
-                                        <label for="text">Edad mínima participante</label>
-                                        <input type="text" name="" id="edad_min">
-                                        <div class="error"></div>
-                                    </div>
-
-                                    <div class="input-control">
-                                        <label for="text">Edad máxima participante</label>
-                                        <input type="text" name="" id="edad_max">
-                                        <div class="error"></div>
-                                    </div>
-                                    
-                                </div>
-                                <button type="submit" class="boton" name="" id="boton_tp">Editar tipo participante</button>
-
-                            </form>
-                        </div>
                     </div>
+
                 </div>
+                <br />
 
-                <div class="clearfix"></div>
-              
+
             </div>
+            {{!-- SWEETALERT --}}
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+            <script src="../js/funciones_v.js"></script>
+            <script src="../validar_v.js"></script>
 
-          </div>
-          <br />
+        </div>
+    </div>
 
-          
-        </div>
-        <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
-        <script src="../js/funciones_tp.js"></script>
-        <script src="validaciones_formulario_editar_t.js"></script>
-        </div>
-    </div> 
-   
-   
+
 
 </body>
 

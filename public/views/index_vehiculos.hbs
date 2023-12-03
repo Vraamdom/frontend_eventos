@@ -13,7 +13,7 @@
 
 </head>
 
-<body class="nav-md">
+<body class="nav-md" onload="listarVehiculos()">
     <div class="container body">
         <div class="main_container">
             <div class="col-md-3 left_col">
@@ -212,8 +212,10 @@
                                 <section class="search_icon">
 
                                     <div class="titulo_s">
-                                        <img src="../images/boton-mas.png" alt="icon" class="icon_add"
+                                        <a href="agregar_vehiculo">
+                                            <img src="../images/boton-mas.png" alt="icon" class="icon_add"
                                             id="btn-abrir-modal">
+                                        </a>
                                         <h4>Agregar vehículo</h4>
                                     </div>
                                     <form class="form-inline my-2 my-lg-0">
@@ -230,11 +232,11 @@
 
 
                                 <main>
-                                    <div class="tabla">
+                                    <div class="tabla" >
                                         <table id="tblVeh" class="table table-striped">
                                             <thead>
                                                 <tr>
-                                                    <th scope="col">ID</th>
+
                                                     <th scope="col">Tipo vehículo</th>
                                                     <th scope="col">Puestos</th>
                                                     <th scope="col">Placa vehículo</th>
@@ -243,7 +245,7 @@
 
                                                 </tr>
                                             </thead>
-                                            <tbody>
+                                            <tbody id="contenido_v">
 
                                             </tbody>
                                         </table>
@@ -270,7 +272,8 @@
 
 
             </div>
-            {{>footer_editar_v}}
+            <script src="../js/funciones_v.js"></script>
+
 
         </div>
     </div>
