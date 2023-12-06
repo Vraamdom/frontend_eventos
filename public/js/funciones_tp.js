@@ -1,7 +1,6 @@
 
 const url = 'https://backend-eventos.onrender.com/tipo_participantes'
 
-
 const listarTP = async () => {
     //Objeto del html donde se deslegará la información
     let objectId = document.getElementById('contenido_tp')

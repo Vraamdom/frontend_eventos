@@ -1,5 +1,5 @@
 
-const url = 'http://localhost:1121/vehiculos_contratados'
+const url = 'https://backend-eventos.onrender.com/vehiculos_contratados'
 
 const url_dolar = 'https://www.datos.gov.co/resource/mcec-87by.json'
 
