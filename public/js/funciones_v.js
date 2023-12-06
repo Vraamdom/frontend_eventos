@@ -1,6 +1,44 @@
 
 const url = 'http://localhost:1121/vehiculos_contratados'
 
+const url_dolar = 'https://www.datos.gov.co/resource/mcec-87by.json'
+
+function actualizarValorDolar() {
+    const dolarInput = document.getElementById('dolar');
+
+    // Realizar la petición a la URL utilizando fetch
+    fetch(url_dolar, {
+        method: 'GET',
+        mode: 'cors',
+        headers: { "Content-type": "application/json; charset=UTF-8" }
+    })
+    .then(response => {
+        // Verificar si la respuesta es un JSON válido
+        if (!response.ok) {
+            throw new Error('Error en la solicitud de la API');
+        }
+        return response.json();
+    })
+    .then(dataArray => {
+        // Verificar si hay al menos un objeto en el array
+        if (dataArray && dataArray.length > 0) {
+            // Tomar el primer objeto del array (asumiendo que eso es lo que necesitas)
+            const primerObjeto = dataArray[0];
+
+            // Actualizar el valor del input con el valor del objeto
+            dolarInput.value = `${primerObjeto.valor}`;
+        } else {
+            throw new Error('Formato de respuesta incorrecto o array vacío');
+        }
+    })
+    .catch(error => {
+        console.error('Error al obtener el valor del dólar:', error);
+        dolarInput.value = 'Error al obtener el valor del dólar';
+    });
+}
+  
+
+
 const listarVehiculos = async () => {
     //Objeto del html donde se deslegará la información
     let objectId = document.getElementById('contenido_v')
@@ -25,6 +63,7 @@ const listarVehiculos = async () => {
                     `<td>` + vehiculo.tipo_vehiculo + `</td>` +
                     `<td>` + vehiculo.puestos_vehiculo + `</td>` +
                     `<td>` + vehiculo.placa_vehiculo + `</td>` +
+                    `<td>` + vehiculo.precio_dolar + `</td>` +
                     `<td><button onclick="redireccionarEditar('${objetoVehiculo}')"
             style= "border: none; background: none;"><img
                          src="../images/editar.png" alt="icon"
@@ -47,6 +86,7 @@ const registrarVehiculo = () => {
     const tipo_vehiculo = document.getElementById('tipo_ve').value;
     const placa_ve = document.getElementById('placa_ve').value
     const puestos_ve = document.getElementById('puestos_ve').value
+    const dolar_precio = document.getElementById('dolar').value
 
 
     if (placa_ve.length == 0) {
@@ -58,11 +98,14 @@ const registrarVehiculo = () => {
     }
     else if (tipo_vehiculo == "") {
         document.getElementById('rolHelp').innerHTML = 'Dato requerido'
+    }else if (dolar_precio == "") {
+        document.getElementById('dolarHelp').innerHTML = 'Dato requerido'
     } else {
         let vehiculo = {
             tipo_vehiculo: tipo_vehiculo,
             placa_vehiculo: placa_ve,
-            puestos_vehiculo: puestos_ve
+            puestos_vehiculo: puestos_ve,
+            precio_dolar: dolar_precio
         }
 
         //Fecth permite reaizar peticiones http a una url
@@ -83,6 +126,7 @@ const actualizarVehiculo = () => {
     const tipo_vehiculo = document.getElementById('tipo_ve').value;
     const placa_ve = document.getElementById('placa_ve').value
     const puestos_ve = document.getElementById('puestos_ve').value
+    const dolar_precio = document.getElementById('dolar').value
 
     if (placa_ve.length == 0) {
         document.getElementById('nombreHelp').innerHTML = 'Dato requerido'
@@ -93,11 +137,14 @@ const actualizarVehiculo = () => {
     }
     else if (tipo_vehiculo == "") {
         document.getElementById('rolHelp').innerHTML = 'Dato requerido'
+    }else if (dolar_precio == "") {
+        document.getElementById('dolarHelp').innerHTML = 'Dato requerido'
     } else {
         let vehiculo = {
             tipo_vehiculo: tipo_vehiculo,
             placa_vehiculo: placa_ve,
-            puestos_vehiculo: puestos_ve
+            puestos_vehiculo: puestos_ve,
+            precio_dolar: dolar_precio
         }
 
         //Fecth permite reaizar peticiones http a una url
@@ -125,7 +172,7 @@ const editarVehiculo = () => {
     document.getElementById('tipo_ve').value = urlParams.get('tipo_vehiculo')
     document.getElementById('placa_ve').value = urlParams.get('placa_vehiculo')
     document.getElementById('puestos_ve').value = urlParams.get('puestos_vehiculo')
-
+    document.getElementById('dolar').value = urlParams.get('precio_dolar')
 
 }
 

@@ -9,8 +9,8 @@
   "keywords": [],
   "author": "Jose luis madrid londoño",
   "license": "ISC",
-  "engines":{
-    "node" : ">=14.20.1"
+  "engines": {
+    "node": ">=14.20.1"
   },
   "dependencies": {
     "bootstrap": "^5.3.2",

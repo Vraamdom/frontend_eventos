@@ -13,7 +13,7 @@
 
 </head>
 
-<body class="nav-md">
+<body class="nav-md" onload="actualizarValorDolar()">
     <div class="container body">
         <div class="main_container">
             <div class="col-md-3 left_col">
@@ -237,6 +237,12 @@
                                             <div class="input-control">
                                                 <label for="text">Puestos del vehículo</label>
                                                 <input type="text" name="" id="puestos_ve">
+                                                <div class="error"></div>
+                                            </div>
+
+                                            <div class="input-control">
+                                                <label for="text">Precio dolar</label>
+                                                <input type="text" name="" id="dolar">
                                                 <div class="error"></div>
                                             </div>
                                             <button type="submit" class="boton" name="" id="boton">Agregar vehículo
